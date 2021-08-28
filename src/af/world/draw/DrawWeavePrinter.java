@@ -1,6 +1,7 @@
 package af.world.draw;
 
 import arc.*;
+import arc.graphics.*;
 import arc.graphics.g2d.*;
 import arc.math.*;
 import arc.math.geom.*;
@@ -13,6 +14,7 @@ import mindustry.world.blocks.production.GenericCrafter.*;
 import af.content.*;
 
 public class DrawWeavePrinter extends DrawBlock{
+	public Color printColor = Color.valueOf("##ffd59e");
 	public float percentageRadius = 40; // percentage/100 * block.size
 	public float xWave = 4;
 	public float yWave = 1;
@@ -20,6 +22,28 @@ public class DrawWeavePrinter extends DrawBlock{
 	
 	public DrawWeavePrinter(){
 		
+	}
+	
+	public DrawWeavePrinter(Color printColor){
+		this.printColor = printColor;
+	}
+	
+	public DrawWeavePrinter(Color printColor, float percentageRadius){
+		this.printColor = printColor;
+		this.percentageRadius = percentageRadius;
+	}
+	
+	public DrawWeavePrinter(Color printColor, float xWave, float yWave){
+		this.printColor = printColor;
+		this.xWave = xWave;
+		this.yWave = yWave;
+	}
+	
+	public DrawWeavePrinter(Color printColor, float percentageRadius, float xWave, float yWave){
+		this.printColor = printColor;
+		this.percentageRadius = percentageRadius;
+		this.xWave = xWave;
+		this.yWave = yWave;
 	}
 	
 	public DrawWeavePrinter(float percentageRadius){
@@ -41,8 +65,8 @@ public class DrawWeavePrinter extends DrawBlock{
 	public void draw(GenericCrafterBuild build){
 		float rotation = 360f * build.progress;
 		
-		float tx = build.x + Mathf.sin(build.progress * (xWave * 2) * Mathf.pi) * (Vars.tilesize * (percentageRadius / 100 * build.block.size) / 2);
-		float ty = build.y + Mathf.sin(build.progress * (yWave * 2) * Mathf.pi) * (Vars.tilesize * (percentageRadius / 100 * build.block.size) / 2);
+		float tx = build.x + Mathf.sin(build.totalProgress * (xWave * 2) * Mathf.pi) * (Vars.tilesize * (percentageRadius / 100 * build.block.size) / 2);
+		float ty = build.y + Mathf.sin(build.totalProgress * (yWave * 2) * Mathf.pi) * (Vars.tilesize * (percentageRadius / 100 * build.block.size) / 2);
 		
 		Draw.rect(bottom, build.x, build.y);
 		
@@ -57,7 +81,7 @@ public class DrawWeavePrinter extends DrawBlock{
 		Draw.rect(printer, tx, ty, rotation);
 		Draw.reset();
 		
-		AFFx.printing.at(tx, ty);
+		AFFx.printing.at(tx, ty, printColor);
 	}
 	
 	@Override
