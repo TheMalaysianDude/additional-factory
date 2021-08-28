@@ -1,21 +1,25 @@
 #the mod name as displayed in-game
-displayName: "Java Mod Template"
+displayName: "Additional Crafter"
 
 #the internal name of your mod
-name: "example-java-mod"
+name: "additional-crafter"
 
 #your name
-author: "You"
+author: "TheMalaysianDude"
 
 #the fully qualified main class of the mod
-main: "example.ExampleJavaMod"
+main: "af.AdditionalFactory"
 
 #the mod description as seen in the mod dialog
-description: "A Mindustry Java mod template."
+description: "A Java Mod that adds upgraded version of factories."
 
 #the mod version
-version: 1.0
+version: 1.1
+
+repo: TheMalaysianDude/additional-crafter
 
 #the minimum game build required to run this mod
 minGameVersion: 129
+
+java: true
 
