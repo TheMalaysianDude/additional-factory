@@ -14,7 +14,7 @@ import mindustry.world.blocks.production.GenericCrafter.*;
 import af.content.*;
 
 public class DrawWeavePrinter extends DrawBlock{
-	public Color printColor = Color.valueOf("#ffd59e");
+	public Color printColor = Pal.accent;
 	public float percentageRadius = 40; // percentage/100 * block.size
 	public float xWave = 4;
 	public float yWave = 1;
@@ -82,7 +82,7 @@ public class DrawWeavePrinter extends DrawBlock{
 		Draw.reset();
 		
 		if(build.warmup <= 0.01){
-			AFFx.printing.at(tx, ty, printColor, build);
+			AFFx.printing.at(tx, ty, printColor);
 		}
 	}
 	
