@@ -52,8 +52,8 @@ public class AFFx{
 	printing = new Effect(15f, e -> {
 		
 		randLenVectors(e.id, 2, e.fin(), (x, y) -> {
-			color(Color.white, e.color, e.fin());
-			Fill.square(e.x + x, e.y + y, 0.25f * e.fout() * 2f, 45);
+			color(e.color, e.data.warmup * e.fin());
+			Fill.square(e.x + x, e.y + y, 0.1f * e.fout() * 2f, 45);
 		});
 		
 	});
