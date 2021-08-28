@@ -9,6 +9,7 @@ import mindustry.entities.*;
 import mindustry.game.*;
 import mindustry.gen.*;
 import mindustry.graphics.*;
+import mindustry.world.blocks.production.*;
 
 import static arc.graphics.g2d.Draw.*;
 import static arc.graphics.g2d.Lines.*;
@@ -51,7 +52,7 @@ public class AFFx{
 	
 	printing = new Effect(15f, e -> {
 		
-		GenericCrafterBuild build = e.data();
+		GenericCrafter.GenericCrafterBuild build = e.data();
 		
 		randLenVectors(e.id, 2, e.fin(), (x, y) -> {
 			color(e.color, build.warmup * e.fin());
