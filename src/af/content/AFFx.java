@@ -49,7 +49,7 @@ public class AFFx{
 		}
 	}),
 	
-	printing = new Effect(15f, b -> {
+	printing = new Effect(15f, e -> {
 		
 		randLenVectors(e.id, 4, 2f + e.fin() * 2f, (x, y) -> {
 			color(Color.white, e.color, e.fin());
