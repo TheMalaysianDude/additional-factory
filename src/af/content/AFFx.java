@@ -50,21 +50,11 @@ public class AFFx{
 	}),
 	
 	printing = new Effect(15f, b -> {
-		float intensity = b.rotation;
-        float baseLifetime = 26f + intensity * 15f;
-        b.lifetime = 43f + intensity * 35f;
 		
-        b.scaled(baseLifetime, e -> {
-			
-            color(Pal.lighterOrange, Pal.lightOrange, Color.gray, e.fin());
-            stroke((1.7f * e.fout()) * (1f + (intensity - 1f) / 2f));
-
-            Draw.z(Layer.effect + 0.001f);
-            randLenVectors(e.id + 1, e.finpow() + 0.001f, (int)(9 * intensity), 40f * intensity, (x, y, in, out) -> {
-                lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), 1f + out * 4 * (3f + intensity));
-                Drawf.light(e.x + x, e.y + y, (out * 4 * (3f + intensity)) * 3.5f, Draw.getColor(), 0.8f);
-            });
-        });
+		randLenVectors(e.id, 4, 2f + e.fin() * 2f, (x, y) -> {
+			color(Color.white, e.color, e.fin());
+			Fill.square(e.x + x, e.y + y, 0.5f + e.fout() * 2f, 45);
+		});
 		
 	});
 }
