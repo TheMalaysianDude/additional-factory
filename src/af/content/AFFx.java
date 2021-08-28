@@ -55,7 +55,7 @@ public class AFFx{
 		GenericCrafter.GenericCrafterBuild build = e.data();
 		
 		randLenVectors(e.id, 2, e.fin(), (x, y) -> {
-			alpha(build.warmup * e.fin());
+			alpha(build.warmup);
 			color(e.color);
 			Fill.square(e.x + x, e.y + y, 0.1f * e.fout() * 2f, 45);
 		});
