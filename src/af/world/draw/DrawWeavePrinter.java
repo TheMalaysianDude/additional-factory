@@ -81,9 +81,7 @@ public class DrawWeavePrinter extends DrawBlock{
 		Draw.rect(printer, tx, ty, rotation);
 		Draw.reset();
 		
-		if(build.warmup <= 0.01){
-			AFFx.printing.at(tx, ty, printColor);
-		}
+		AFFx.printing.at(tx, ty, 0, printColor, build);
 	}
 	
 	@Override
