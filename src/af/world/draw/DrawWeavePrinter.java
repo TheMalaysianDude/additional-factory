@@ -65,8 +65,8 @@ public class DrawWeavePrinter extends DrawBlock{
 	public void draw(GenericCrafterBuild build){
 		float rotation = 360f * build.progress;
 		
-		float tx = build.x + Mathf.sin(build.totalProgress * (xWave * 2) * Mathf.pi) * (Vars.tilesize * (percentageRadius / 100 * build.block.size) / 2);
-		float ty = build.y + Mathf.sin(build.totalProgress * (yWave * 2) * Mathf.pi) * (Vars.tilesize * (percentageRadius / 100 * build.block.size) / 2);
+		float tx = build.x + Mathf.sin(build.progress * (xWave * 2) * Mathf.pi) * (Vars.tilesize * (percentageRadius / 100 * build.block.size) / 2);
+		float ty = build.y + Mathf.sin(build.progress * (yWave * 2) * Mathf.pi) * (Vars.tilesize * (percentageRadius / 100 * build.block.size) / 2);
 		
 		Draw.rect(bottom, build.x, build.y);
 		
@@ -81,7 +81,7 @@ public class DrawWeavePrinter extends DrawBlock{
 		Draw.rect(printer, tx, ty, rotation);
 		Draw.reset();
 		
-		AFFx.printing.at(tx, ty, printColor);
+		AFFx.printing.at(tx, ty, 0, printColor, build);
 	}
 	
 	@Override
