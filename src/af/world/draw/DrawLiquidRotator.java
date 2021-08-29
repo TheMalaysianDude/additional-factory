@@ -19,7 +19,7 @@ public class DrawLiquidRotator extends DrawBlock{
 	@Override
 	public void draw(GenericCrafterBuild build){
 		GenericCrafter type = (GenericCrafter)build.block;
-		float totalLiquids = build.liquids.total() / type.liquidCapacity
+		float totalLiquids = build.liquids.total() / type.liquidCapacity;
 		
 		Draw.rect(build.block.region, build.x, build.y);
 		
