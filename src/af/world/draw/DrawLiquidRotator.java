@@ -30,7 +30,7 @@ public class DrawLiquidRotator extends DrawBlock{
 			Draw.color();
 		}
 		
-		/ * (0.5f - Math.abs((1 - build.progress) - 0.5f)) * 2f
+		// * (0.5f - Math.abs((1 - build.progress) - 0.5f)) * 2f
 		
 		if(drawSpinSprite){
 			Drawf.spinSprite(rotator, build.x, build.y, build.totalProgress * 2);
