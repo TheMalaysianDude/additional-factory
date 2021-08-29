@@ -23,14 +23,12 @@ public class DrawLiquidRotator extends DrawBlock{
 		
 		Draw.rect(build.block.region, build.x, build.y);
 		
-		if(build.liquids.total() > 0.001f){
-			Draw.color(build.liquids.current().color);
-			Draw.rect(liquid, build.x, build.y, 
-				(liquid.width/4) * totalLiquids * Math.abs(1 - build.progress),
-				(liquid.height/4) * totalLiquids * Math.abs(1 - build.progress)
-			);
-			Draw.color();
-		}
+		Draw.color(build.liquids.current().color);
+		Draw.rect(liquid, build.x, build.y, 
+			(liquid.width/4) * totalLiquids,
+			(liquid.height/4) * totalLiquids
+		);
+		Draw.color();
 		
 		if(drawSpinSprite){
 			Drawf.spinSprite(rotator, build.x, build.y, build.totalProgress * 2);
