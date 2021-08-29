@@ -28,7 +28,7 @@ public class DrawLiquidRotator extends DrawBlock{
 		
 		if(drawSpinSprite){
 			Drawf.spinSprite(rotator, build.x, build.y, build.totalProgress * 2);
-		else{
+		}else{
 			Draw.rect(rotator, build.x, build.y, build.totalProgress * 2);
 		}
 		if(top.found()) Draw.rect(top, build.x, build.y);
