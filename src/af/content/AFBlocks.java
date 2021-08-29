@@ -43,7 +43,9 @@ public class AFBlocks implements ContentList{
 			size = 3;
 			hasPower = hasItems = hasLiquids = true;
 			itemCapacity = 30;
-			drawer = new DrawLiquidRotator();
+			drawer = new DrawLiquidRotator(){{
+				drawSpinSprite = true;
+			}};
 			
 			consumes.liquid(Liquids.oil, 0.5f);
 			consumes.power(0.2f);
