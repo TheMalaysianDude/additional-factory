@@ -18,19 +18,19 @@ public class DrawLiquidRotator extends DrawBlock{
 	
 	@Override
 	public void draw(GenericCrafterBuild build){
-		Draw.rect(build.block.region, build.x, build.y);
 		GenericCrafter type = (GenericCrafter)build.block;
+		float totalLiquids = build.liquids.total() / type.liquidCapacity
+		
+		Draw.rect(build.block.region, build.x, build.y);
 		
 		if(build.liquids.total() > 0.001f){
-			Draw.color(build.liquids.current().color, build.liquids.total() / type.liquidCapacity);
+			Draw.color(build.liquids.current().color);
 			Draw.rect(liquid, build.x, build.y, 
-				(liquid.width/2),
-				(liquid.height/2)
+				(liquid.width/8) * totalLiquids * build.progress,
+				(liquid.height/8) * totalLiquids * build.progress
 			);
 			Draw.color();
 		}
-		
-		// * (0.5f - Math.abs((1 - build.progress) - 0.5f)) * 2f
 		
 		if(drawSpinSprite){
 			Drawf.spinSprite(rotator, build.x, build.y, build.totalProgress * 2);
