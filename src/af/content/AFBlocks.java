@@ -34,12 +34,12 @@ public class AFBlocks implements ContentList{
 				Items.lead, 70,
 				Items.graphite, 100,
 				Items.titanium, 50,
-				Items.metaglass, 30
+				Items.plastanium, 80
 			));
 			
 			craftEffect = Fx.coalSmeltsmoke;
-			outputItem = new ItemStack(Items.coal, 5);
-			craftTime  = 45;
+			outputItem = new ItemStack(Items.coal, 3);
+			craftTime  = 27f;
 			size = 3;
 			hasPower = hasItems = hasLiquids = true;
 			itemCapacity = 30;
@@ -47,8 +47,8 @@ public class AFBlocks implements ContentList{
 				drawSpinSprite = true;
 			}};
 			
-			consumes.liquid(Liquids.oil, 0.16f);
-			consumes.power(1.4f);
+			consumes.liquid(Liquids.oil, 0.2f);
+			consumes.power(2f);
 		}};
 		
 		phaseCoalescer = new GenericCrafter("phase-coalescer"){{
