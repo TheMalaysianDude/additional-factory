@@ -42,6 +42,8 @@ public class AFBlocks implements ContentList{
 			craftTime  = 45;
 			size = 3;
 			hasPower = hasItems = hasLiquids = true;
+			itemCapacity = 30;
+			drawer = new DrawLiquidRotator();
 			
 			consumes.liquid(Liquids.oil, 0.5f);
 			consumes.power(0.2f);
