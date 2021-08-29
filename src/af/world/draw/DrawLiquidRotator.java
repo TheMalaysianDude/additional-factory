@@ -1,10 +1,14 @@
 package af.world.draw;
 
 import arc.*;
+import arc.graphics.*;
 import arc.graphics.g2d.*;
 import arc.math.*;
+import arc.math.geom.*;
+import arc.util.*;
 import mindustry.graphics.*;
 import mindustry.world.*;
+import mindustry.world.draw.*;
 import mindustry.world.blocks.production.*;
 import mindustry.world.blocks.production.GenericCrafter.*;
 
@@ -18,7 +22,7 @@ public class DrawLiquidRotator extends DrawBlock{
 		GenericCrafter type = (GenericCrafter)build.block;
 		
 		if(build.liquids.total() > 0.001f){
-			Draw.color(build.liquids.current().color, build.liquids.total / type.liquidCapacity);
+			Draw.color(build.liquids.current().color, build.liquids.total() / type.liquidCapacity);
 			Draw.rect(liquid, build.x, build.y, 
 				liquid.width * build.progress,
 				liquid.height * build.progress
