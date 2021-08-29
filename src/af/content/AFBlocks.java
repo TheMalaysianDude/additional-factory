@@ -48,7 +48,7 @@ public class AFBlocks implements ContentList{
 			}};
 			
 			consumes.liquid(Liquids.oil, 0.2f);
-			consumes.power(0.8f);
+			consumes.power(1.4f);
 		}};
 		
 		phaseCoalescer = new GenericCrafter("phase-coalescer"){{
