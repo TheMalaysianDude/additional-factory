@@ -24,10 +24,32 @@ public class AFBlocks implements ContentList{
 	public static Block
 	
 	//production
-	phaseCoalescer, surgePurifier;
+	coalCentripetal, phaseCoalescer, surgePurifier;
 	
 	@Override
 	public void load(){
+		
+		coalCentripetal = new GenericCrafter("coal-centripetal"){{
+			requirements(Category.crafting, with(
+				Items.lead, 70,
+				Items.graphite, 100,
+				Items.titanium, 50,
+				Items.metaglass, 30
+			));
+			
+			craftEffect = Fx.coalSmeltsmoke;
+			outputItem = new ItemStack(Items.coal, 5);
+			craftTime  = 45;
+			size = 3;
+			hasPower = hasItems = hasLiquids = true;
+			itemCapacity = 30;
+			drawer = new DrawLiquidRotator(){{
+				drawSpinSprite = true;
+			}};
+			
+			consumes.liquid(Liquids.oil, 0.16f);
+			consumes.power(1.4f);
+		}};
 		
 		phaseCoalescer = new GenericCrafter("phase-coalescer"){{
 			requirements(Category.crafting, with(

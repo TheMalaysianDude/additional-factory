@@ -14,52 +14,11 @@ import mindustry.world.blocks.production.GenericCrafter.*;
 import af.content.*;
 
 public class DrawWeavePrinter extends DrawBlock{
+	public TextureRegion weave, bottom, slider, pointer, printer;
 	public Color printColor = Pal.accent;
 	public float percentageRadius = 40; // percentage/100 * block.size
 	public float xWave = 4;
 	public float yWave = 1;
-	public TextureRegion weave, bottom, slider, pointer, printer;
-	
-	public DrawWeavePrinter(){
-		
-	}
-	
-	public DrawWeavePrinter(Color printColor){
-		this.printColor = printColor;
-	}
-	
-	public DrawWeavePrinter(Color printColor, float percentageRadius){
-		this.printColor = printColor;
-		this.percentageRadius = percentageRadius;
-	}
-	
-	public DrawWeavePrinter(Color printColor, float xWave, float yWave){
-		this.printColor = printColor;
-		this.xWave = xWave;
-		this.yWave = yWave;
-	}
-	
-	public DrawWeavePrinter(Color printColor, float percentageRadius, float xWave, float yWave){
-		this.printColor = printColor;
-		this.percentageRadius = percentageRadius;
-		this.xWave = xWave;
-		this.yWave = yWave;
-	}
-	
-	public DrawWeavePrinter(float percentageRadius){
-		this.percentageRadius = percentageRadius;
-	}
-	
-	public DrawWeavePrinter(float xWave, float yWave){
-		this.xWave = xWave;
-		this.yWave = yWave;
-	}
-	
-	public DrawWeavePrinter(float percentageRadius, float xWave, float yWave){
-		this.percentageRadius = percentageRadius;
-		this.xWave = xWave;
-		this.yWave = yWave;
-	}
 	
 	@Override
 	public void draw(GenericCrafterBuild build){
