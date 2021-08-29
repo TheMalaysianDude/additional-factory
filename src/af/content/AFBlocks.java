@@ -47,7 +47,7 @@ public class AFBlocks implements ContentList{
 				drawSpinSprite = true;
 			}};
 			
-			consumes.liquid(Liquids.oil, 0.2f);
+			consumes.liquid(Liquids.oil, 0.16f);
 			consumes.power(1.4f);
 		}};
 		
