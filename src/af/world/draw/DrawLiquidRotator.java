@@ -26,8 +26,8 @@ public class DrawLiquidRotator extends DrawBlock{
 		if(build.liquids.total() > 0.001f){
 			Draw.color(build.liquids.current().color);
 			Draw.rect(liquid, build.x, build.y, 
-				(liquid.width/8) * totalLiquids * build.progress,
-				(liquid.height/8) * totalLiquids * build.progress
+				(liquid.width/4) * totalLiquids * Math.abs(1 - build.progress),
+				(liquid.height/4) * totalLiquids * Math.abs(1 - build.progress)
 			);
 			Draw.color();
 		}
