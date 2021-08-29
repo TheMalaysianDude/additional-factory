@@ -47,8 +47,8 @@ public class AFBlocks implements ContentList{
 				drawSpinSprite = true;
 			}};
 			
-			consumes.liquid(Liquids.oil, 0.5f);
-			consumes.power(0.2f);
+			consumes.liquid(Liquids.oil, 0.2f);
+			consumes.power(0.8f);
 		}};
 		
 		phaseCoalescer = new GenericCrafter("phase-coalescer"){{
