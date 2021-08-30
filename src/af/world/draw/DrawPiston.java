@@ -24,8 +24,8 @@ public class DrawPiston extends DrawBlock{
 		
 		for(int dx = 0; dx < x; dx++){
 			for(int dy = 0; dy < y; dy++){
-				float tx = (dx * spacing) - (spacing * x / 2 );
-				float ty = (dy * spacing) - (spacing * y / 2);
+				float tx = (spacing * x / 2 ) - (dx * spacing);
+				float ty = (spacing * y / 2) - (dy * spacing);
 				
 				Draw.rect(piston, build.x + tx, build.y + ty);
 				
