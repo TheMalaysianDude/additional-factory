@@ -12,6 +12,7 @@ import mindustry.world.blocks.production.GenericCrafter.*;
 
 public class DrawPiston extends DrawBlock{
 	public TextureRegion piston, heat;
+	public Color heatColor = Pal.turretHeat;
 	public int x = 2;
 	public int y = 2;
 	public float spacing = 4;

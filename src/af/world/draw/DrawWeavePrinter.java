@@ -54,6 +54,6 @@ public class DrawWeavePrinter extends DrawBlock{
 	
 	@Override
 	public TextureRegion[] icons(Block block){
-		return new TextureRegion[]{bottom, weave, slider, block.region, pointer, printer};
+		return new TextureRegion[]{bottom, slider, block.region, pointer, printer};
 	}
 }
