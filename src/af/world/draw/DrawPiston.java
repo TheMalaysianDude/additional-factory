@@ -6,7 +6,7 @@ import arc.math.*;
 import mindustry.*;
 import mindustry.graphics.*;
 import mindustry.world.*;
-import mindustry.world.draw*;
+import mindustry.world.draw.*;
 import mindustry.world.blocks.production.GenericCrafter.*;
 
 public class DrawPiston extends DrawBlock(
