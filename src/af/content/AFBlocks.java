@@ -24,7 +24,7 @@ public class AFBlocks implements ContentList{
 	public static Block
 	
 	//production
-	coalCentripetal, plastaniumTruncator, phaseCoalescer, surgePurifier;
+	coalCentripetal, plastaniumConstrict, phaseCoalescer, surgePurifier;
 	
 	@Override
 	public void load(){
@@ -53,7 +53,7 @@ public class AFBlocks implements ContentList{
 			consumes.power(2f);
 		}};
 		
-		plastaniumTruncator = new GenericCrafter("plastanium-truncator"){{
+		plastaniumConstrict = new GenericCrafter("plastanium-constrict"){{
 			requirements(Category.crafting, with(
 				Items.silicon, 120,
 				Items.lead, 210,
