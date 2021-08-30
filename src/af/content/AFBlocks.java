@@ -70,7 +70,7 @@ public class AFBlocks implements ContentList{
 			hasPower = hasLiquids = true;
 			craftEffect = Fx.formsmoke;
 			updateEffect = Fx.plasticburn;
-			//drawer = new DrawPiston();
+			drawer = new DrawPiston();
 			
 			consumes.liquid(Liquids.oil, 0.4f);
 			consumes.power(5.5f);
