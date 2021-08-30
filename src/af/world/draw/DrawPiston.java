@@ -1,6 +1,7 @@
 package af.world.draw;
 
 import arc.*;
+import arc.graphics.*;
 import arc.graphics.g2d.*;
 import arc.math.*;
 import mindustry.*;
@@ -30,7 +31,7 @@ public class DrawPiston extends DrawBlock{
 		}
 		
 		if(heat.found()){
-			Draw.color(heatColor, tile.heat);
+			Draw.color(heatColor, build.warmup);
 			Draw.blend(Blending.additive);
 			Draw.rect(heat, build.x, build.y);
 			Draw.blend();
