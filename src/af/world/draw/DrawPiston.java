@@ -9,7 +9,7 @@ import mindustry.world.*;
 import mindustry.world.draw.*;
 import mindustry.world.blocks.production.GenericCrafter.*;
 
-public class DrawPiston extends DrawBlock(
+public class DrawPiston extends DrawBlock{
 	public TextureRegion piston, heat;
 	public int x = 2;
 	public int y = 2;
