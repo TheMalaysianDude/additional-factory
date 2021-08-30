@@ -1,6 +1,7 @@
 package af.world.draw;
 
 import arc.*;
+import arc.util.*;
 import arc.graphics.*;
 import arc.graphics.g2d.*;
 import arc.math.*;
@@ -26,6 +27,9 @@ public class DrawPiston extends DrawBlock{
 			for(int dy = 1; dy <= y; dy++){
 				float tx = (dx/2 * spacing) - (spacing * x);
 				float ty = (dy/2 * spacing) - (spacing * y);
+				
+				//debug
+				Log.info(tx + ", " + ty);
 				
 				Draw.rect(piston, build.x + tx, build.y + ty);
 			}
