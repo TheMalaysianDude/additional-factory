@@ -24,10 +24,12 @@ public class AFBlocks implements ContentList{
 	public static Block
 	
 	//production
-	coalCentripetal, phaseCoalescer, surgePurifier;
+	coalCentripetal, plastaniumConstrict, phaseCoalescer, surgePurifier;
 	
 	@Override
 	public void load(){
+		
+		//region crafting
 		
 		coalCentripetal = new GenericCrafter("coal-centripetal"){{
 			requirements(Category.crafting, with(
@@ -49,6 +51,30 @@ public class AFBlocks implements ContentList{
 			
 			consumes.liquid(Liquids.oil, 0.2f);
 			consumes.power(2f);
+		}};
+		
+		plastaniumConstrict = new GenericCrafter("plastanium-constrict"){{
+			requirements(Category.crafting, with(
+				Items.silicon, 120,
+				Items.lead, 210,
+				Items.graphite, 80,
+				Items.plastanium, 100
+			));
+			
+			hasItems = true;
+			liquidCapacity = 120f;
+			outputItem = new ItemStack(Items.plastanium, 2);
+			size = 3;
+			craftTime = 45f;
+			health = 580;
+			hasPower = hasLiquids = true;
+			craftEffect = Fx.formsmoke;
+			updateEffect = Fx.plasticburn;
+			drawer = new DrawPiston();
+			
+			consumes.liquid(Liquids.oil, 0.4f);
+			consumes.power(5.5f);
+			consumes.item(Items.titanium, 4);
 		}};
 		
 		phaseCoalescer = new GenericCrafter("phase-coalescer"){{
@@ -74,7 +100,6 @@ public class AFBlocks implements ContentList{
 			));
 		}};
 		
-		//region crafting
 		surgePurifier = new GenericCrafter("alloy-purifier"){{
 			requirements(Category.crafting, with(
 				Items.silicon, 180,
