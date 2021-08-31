@@ -18,7 +18,7 @@ public class DrawPiston extends DrawBlock{
 	public float y = 2;
 	public float spacing = 8;
 	public float scale = 4;
-	public float min = 2;
+	public float min = 5;
 	
 	@Override
 	public void draw(GenericCrafterBuild build){
@@ -33,8 +33,8 @@ public class DrawPiston extends DrawBlock{
 				float ty = (dy - ((y - 1) / y)*(y / 2)) * spacing;
 				
 				Draw.rect(piston, build.x + tx, build.y + ty,
-					Math.min(Mathf.sin(build.totalProgress + (count * spacing), scale * Mathf.pi, (piston.width/4)), min),
-					Math.min(Mathf.sin(build.totalProgress + (count * spacing), scale * Mathf.pi, (piston.width/4)), min)
+					Math.min(min, Mathf.sin(build.totalProgress + (count * spacing), scale * Mathf.pi, (piston.width/4))),
+					Math.min(min, Mathf.sin(build.totalProgress + (count * spacing), scale * Mathf.pi, (piston.width/4)))
 				);
 				
 				count += 1;
