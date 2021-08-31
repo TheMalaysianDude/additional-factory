@@ -15,7 +15,7 @@ public class DrawPiston extends DrawBlock{
 	public Color heatColor = Pal.turretHeat;
 	public int x = 2;
 	public int y = 2;
-	public float spacing = 4;
+	public float spacing = 8;
 	
 	@Override
 	public void draw(GenericCrafterBuild build){
@@ -24,9 +24,9 @@ public class DrawPiston extends DrawBlock{
 		
 		for(int dx = 0; dx < x; dx++){
 			for(int dy = 0; dy < y; dy++){
-				float count = dy * x + dx;
-				float tx = (((dx + 0.5f)) - x/2) * (spacing/2);
-				float ty = (((dy + 0.5f)) - y/2) * (spacing/2);
+				// ((dx - x)/2) * spacing
+				float tx = (((dx + 0.5f)) - x/2) * spacing;
+				float ty = (((dy + 0.5f)) - y/2) * spacing;
 				
 				Draw.rect(piston, build.x + tx, build.y + ty);
 			}
