@@ -14,8 +14,8 @@ import mindustry.world.blocks.production.GenericCrafter.*;
 public class DrawPiston extends DrawBlock{
 	public TextureRegion piston, heat;
 	public Color heatColor = Pal.turretHeat;
-	public int x = 2;
-	public int y = 2;
+	public float x = 2;
+	public float y = 2;
 	public float spacing = 8;
 	
 	@Override
@@ -26,11 +26,8 @@ public class DrawPiston extends DrawBlock{
 		for(int dx = 0; dx < x; dx++){
 			for(int dy = 0; dy < y; dy++){
 				//((dx) - ((x - 1)/x) * (x/2)) * spacing
-				float tx = (dx - ((x-1)/x)*(x/2)) * spacing;
-				float ty = (dy - ((y-1)/y)*(y/2)) * spacing;
-				
-				//debug
-				Log.info(((x - 1) / x) * (x/2) + ", " + ((y - 1) / y) * (y/2));
+				float tx = (dx - ((x - 1) / x)*(x / 2 )) * spacing;
+				float ty = (dy - ((y - 1) / y)*(y / 2 )) * spacing;
 				
 				Draw.rect(piston, build.x + tx, build.y + ty);
 			}
