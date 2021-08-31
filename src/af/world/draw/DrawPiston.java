@@ -17,7 +17,7 @@ public class DrawPiston extends DrawBlock{
 	public float x = 2;
 	public float y = 2;
 	public float spacing = 8;
-	public float scale = 2
+	public float scale = 2;
 	
 	@Override
 	public void draw(GenericCrafterBuild build){
