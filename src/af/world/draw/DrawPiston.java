@@ -37,6 +37,9 @@ public class DrawPiston extends DrawBlock{
 					Math.min(min, Mathf.sin(build.totalProgress + (count * spacing), scale * Mathf.pi, (piston.width/4)))
 				);
 				
+				//debug
+				Log.info(Math.min(min, Mathf.sin(build.totalProgress + (count * spacing), scale * Mathf.pi, (piston.width/4))));
+				
 				count += 1;
 			}
 		}
