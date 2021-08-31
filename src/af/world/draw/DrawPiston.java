@@ -28,17 +28,14 @@ public class DrawPiston extends DrawBlock{
 		float count = 1;
 		for(int dx = 0; dx < x; dx++){
 			for(int dy = 0; dy < y; dy++){
-				
+				float size = Math.min(min, Math.abs(Mathf.sin(build.totalProgress + (count * spacing), scale * Mathf.pi, (piston.width/4))));
 				float tx = (dx - ((x - 1) / x)*(x / 2)) * spacing;
 				float ty = (dy - ((y - 1) / y)*(y / 2)) * spacing;
 				
 				Draw.rect(piston, build.x + tx, build.y + ty,
-					Math.min(min, Mathf.sin(build.totalProgress + (count * spacing), scale * Mathf.pi, (piston.width/4))),
-					Math.min(min, Mathf.sin(build.totalProgress + (count * spacing), scale * Mathf.pi, (piston.width/4)))
+					size,
+					size
 				);
-				
-				//debug
-				Log.info(Math.min(min, Mathf.sin(build.totalProgress + (count * spacing), scale * Mathf.pi, (piston.width/4))));
 				
 				count += 1;
 			}
