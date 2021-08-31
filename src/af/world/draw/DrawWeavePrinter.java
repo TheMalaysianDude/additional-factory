@@ -17,8 +17,8 @@ public class DrawWeavePrinter extends DrawBlock{
 	public TextureRegion weave, bottom, slider, pointer, printer;
 	public Color printColor = Pal.accent;
 	public float percentageRadius = 40; // percentage/100 * block.size
-	public float xWave = 4;
-	public float yWave = 1;
+	public float xWave = 3;
+	public float yWave = 2;
 	
 	@Override
 	public void draw(GenericCrafterBuild build){
