@@ -30,7 +30,7 @@ public class DrawPiston extends DrawBlock{
 				float ty = (dy - ((y-1)/y)*(y/2)) * spacing;
 				
 				//debug
-				Log.info(dx - ((x - 1)/x) * (x/2));
+				Log.info(((x - 1) / x) * (x/2) + ", " + ((y - 1) / y) * (y/2));
 				
 				Draw.rect(piston, build.x + tx, build.y + ty);
 			}
