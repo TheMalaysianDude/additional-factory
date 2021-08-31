@@ -32,8 +32,8 @@ public class DrawPiston extends DrawBlock{
 				float ty = (dy - ((y - 1) / y)*(y / 2)) * spacing;
 				
 				Draw.rect(piston, build.x + tx, build.y + ty,
-					Mathf.sin(build.totalProgress + (count / x), scale * Mathf.pi, (piston.width/4)),
-					Mathf.sin(build.totalProgress + (count / y), scale * Mathf.pi, (piston.width/4))
+					Mathf.sin(build.totalProgress + (count * dx * x), scale * Mathf.pi, (piston.width/4)),
+					Mathf.sin(build.totalProgress + (count * dy * y), scale * Mathf.pi, (piston.width/4))
 				);
 				
 				count += 1;
