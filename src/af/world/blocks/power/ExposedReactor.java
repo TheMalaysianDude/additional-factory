@@ -8,7 +8,6 @@ import arc.math.geom.*;
 import arc.struct.*;
 import arc.util.*;
 import arc.util.io.*;
-//import mindustry.annotations.Annotations.*;
 import mindustry.content.*;
 import mindustry.entities.*;
 import mindustry.game.EventType.*;
@@ -24,11 +23,19 @@ import af.content.*;
 import static mindustry.Vars.*;
 
 public class ExposedReactor extends ImpactReactor{
+	public TextureRegion bottomRegion;
+	public TextureRegion slider1; 
+	public TextureRegion slider2; 
 	
-	public @Load("@-bottom") TextureRegion bottomRegion;
-	public @Load(value = "@-slider1", fallback = "clear-effect") TextureRegion slider1; 
-	public @Load(value = "@-slider2", fallback = "clear-effect") TextureRegion slider2; 
 	public float sliderLength = 14f/4f;
+	
+	@Override
+	public void load(){
+		super.load();
+		bottomRegion = Core.atlas.find(name + "-bottomRegion");
+		slider1 = Core.atlas.find(name + "-slider1");
+		slider2 = Core.atlas.find(name + "-slider2");
+	}
 	
 	public class ExposedReactorBuild extends ImpactReactor.ImpactReactorBuild{
 		
