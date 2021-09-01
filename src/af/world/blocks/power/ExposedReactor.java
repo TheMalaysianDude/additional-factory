@@ -1,12 +1,5 @@
 package af.world.blocks.power;
 
-import mindustry.world.*;
-
-public class ExposedReactor extends Block{
-	
-}
-
-/*
 import arc.*;
 import arc.graphics.*;
 import arc.graphics.g2d.*;
@@ -36,6 +29,10 @@ public class ExposedReactor extends PowerGenerator{
 	
 	public float sliderLength = 14f/4f;
 	
+	public ExposedReactor(String name){
+		super(name);
+	}
+	
 	@Override
 	public void load(){
 		super.load();
@@ -64,4 +61,3 @@ public class ExposedReactor extends PowerGenerator{
 		}
 	}
 }
-*/
