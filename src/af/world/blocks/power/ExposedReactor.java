@@ -22,8 +22,7 @@ import af.content.*;
 
 import static mindustry.Vars.*;
 
-public class ExposedReactor extends ImpactReactor{
-/*
+public class ExposedReactor extends PowerGenerator{
 	public TextureRegion bottomRegion;
 	public TextureRegion slider1; 
 	public TextureRegion slider2; 
@@ -38,7 +37,8 @@ public class ExposedReactor extends ImpactReactor{
 		slider2 = Core.atlas.find(name + "-slider2");
 	}
 	
-	public class ExposedReactorBuild extends ImpactReactorBuild{
+	public class ExposedReactorBuild extends GeneratorBuild{
+		public float warmup;
 		
 		@Override
 		public void draw(){
@@ -56,5 +56,4 @@ public class ExposedReactor extends ImpactReactor{
             }
 		}
 	}
-*/
 }
