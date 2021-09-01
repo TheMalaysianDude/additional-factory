@@ -1,7 +1,7 @@
 # Additional Factory
 A GENERIC Java Mod that adds additional factory based on their predeccesor.
 
-`currently have 3 factories`
+`currently have 4 factories`
 
 # Recent Updates
 Coal Centripetal
