@@ -27,7 +27,7 @@ public class ExposedReactor extends ImpactReactor{
 	public TextureRegion slider1; 
 	public TextureRegion slider2; 
 	
-	public float sliderLength = 14f/4f;
+	public float sliderLength = 10;
 	
 	public ExposedReactor(String name){
 		super(name);
@@ -36,7 +36,7 @@ public class ExposedReactor extends ImpactReactor{
 	@Override
 	public void load(){
 		super.load();
-		bottomRegion = Core.atlas.find(name + "-bottomRegion");
+		bottomRegion = Core.atlas.find(name + "-bottom");
 		slider1 = Core.atlas.find(name + "-slider1");
 		slider2 = Core.atlas.find(name + "-slider2");
 	}
@@ -46,15 +46,16 @@ public class ExposedReactor extends ImpactReactor{
 		@Override
 		public void draw(){
 			Draw.rect(bottomRegion, x, y);
-			drawSliders(warmup);
+			drawSliders();
 			Draw.rect(region, x, y);
 		}
 		
-		public void drawSliders(float frame){
-			float length = sliderLength * (frame - 1f) - 1f/4f;
+		public void drawSliders(){
+			float length =  sliderLength (1f - warmup);
             for(int i = 0; i < 4; i++){
                 var reg = i >= 2 ? slider2 : slider1;
-                float dx = Geometry.d4x[i] * length, dy = Geometry.d4y[i] * length;
+                float dx = Geometry.d4x[i] * length;
+				float dy = Geometry.d4y[i] * length;
                 Draw.rect(reg, x + dx, y + dy, i * 90);
             }
 		}
