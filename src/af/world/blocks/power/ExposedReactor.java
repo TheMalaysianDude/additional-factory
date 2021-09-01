@@ -1,6 +1,6 @@
 package af.world.blocks.power;
 
-import arc.mindustry.world.*;
+import mindustry.world.*;
 
 public class ExposedReactor extends Block{
 	
