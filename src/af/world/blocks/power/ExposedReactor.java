@@ -20,10 +20,10 @@ import mindustry.world.meta.*;
 import mindustry.world.blocks.power.*;
 import af.content.*;
 
-import static mindustry.world.blocks.power.ImpactReactor;
 import static mindustry.Vars.*;
 
 public class ExposedReactor extends ImpactReactor{
+/*
 	public TextureRegion bottomRegion;
 	public TextureRegion slider1; 
 	public TextureRegion slider2; 
@@ -56,4 +56,5 @@ public class ExposedReactor extends ImpactReactor{
             }
 		}
 	}
+*/
 }
