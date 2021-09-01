@@ -51,7 +51,7 @@ public class ExposedReactor extends ImpactReactor{
 		}
 		
 		public void drawSliders(){
-			float length =  sliderLength (1f - warmup);
+			float length = sliderLength * (1f - warmup);
             for(int i = 0; i < 4; i++){
                 var reg = i >= 2 ? slider2 : slider1;
                 float dx = Geometry.d4x[i] * length;
