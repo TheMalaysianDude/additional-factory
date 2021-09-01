@@ -17,6 +17,7 @@ import mindustry.world.consumers.*;
 import mindustry.world.draw.*;
 import mindustry.world.meta.*;
 import af.world.draw.*;
+import af.world.blocks.*;
 
 import static mindustry.type.ItemStack.*;
 
@@ -24,7 +25,10 @@ public class AFBlocks implements ContentList{
 	public static Block
 	
 	//production
-	coalCentripetal, plastaniumConstrict, phaseCoalescer, surgePurifier;
+	coalCentripetal, plastaniumConstrict, phaseCoalescer, surgePurifier,
+	
+	//experimental
+	neutroniumReactor;
 	
 	@Override
 	public void load(){
@@ -125,6 +129,20 @@ public class AFBlocks implements ContentList{
 				Items.silicon, 5
 			));
 			consumes.liquid(Liquids.slag, 0.2f);
+		}};
+		//region end
+		
+		//region experimental
+		neutroniumReactor = new ExposedReactor("neutronium-reactor"){{
+			requirements(Category.power, with());
+			size = 7;
+			health = 1300;
+			powerProduction = 240f;
+			itemDuration = 200f;
+			
+            consumes.power(25f);
+            consumes.item(Items.copper);
+            consumes.liquid(Liquids.water, 0.1f);
 		}};
 		//region end
 		
