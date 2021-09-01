@@ -1,5 +1,12 @@
 package af.world.blocks.power;
 
+import arc.mindustry.world.*;
+
+public class ExposedReactor extends Block{
+	
+}
+
+/*
 import arc.*;
 import arc.graphics.*;
 import arc.graphics.g2d.*;
@@ -57,3 +64,4 @@ public class ExposedReactor extends PowerGenerator{
 		}
 	}
 }
+*/
