@@ -24,9 +24,9 @@ import static mindustry.Vars.*;
 
 public class ExposedReactor extends ImpactReactor{
 	
-	public @Load("-bottom") TextureRegion bottomRegion;
-	public @Load("-slider1", fallback = "clear-effect") TextureRegion slider1; 
-	public @Load("-slider2", fallback = "clear-effect") TextureRegion slider2; 
+	public @Load("@-bottom") TextureRegion bottomRegion;
+	public @Load(value = "@-slider1", fallback = "clear-effect") TextureRegion slider1; 
+	public @Load(value = "@-slider2", fallback = "clear-effect") TextureRegion slider2; 
 	public float sliderLength = 14f/4f;
 	
 	public class ExposedReactorBuild extends ImpactReactor.ImpactReactorBuild{
