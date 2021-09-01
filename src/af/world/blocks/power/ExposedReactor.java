@@ -20,6 +20,7 @@ import mindustry.world.meta.*;
 import mindustry.world.blocks.power.*;
 import af.content.*;
 
+import static mindustry.world.blocks.power.ImpactReactor;
 import static mindustry.Vars.*;
 
 public class ExposedReactor extends ImpactReactor{
@@ -37,7 +38,7 @@ public class ExposedReactor extends ImpactReactor{
 		slider2 = Core.atlas.find(name + "-slider2");
 	}
 	
-	public class ExposedReactorBuild extends ImpactReactor.ImpactReactorBuild{
+	public class ExposedReactorBuild extends ImpactReactorBuild{
 		
 		@Override
 		public void draw(){
