@@ -28,7 +28,7 @@ public class AFBlocks implements ContentList{
 	coalCentripetal, plastaniumConstrict, phaseCoalescer, surgePurifier,
 	
 	//experimental
-	neutroniumReactor;
+	neutroniumReactor, bananaReactor;
 	
 	@Override
 	public void load(){
@@ -142,6 +142,18 @@ public class AFBlocks implements ContentList{
 			
             consumes.power(25f);
             consumes.item(Items.copper);
+            consumes.liquid(Liquids.water, 0.1f);
+		}};
+		
+		bananaReactor = new ExposedReactor("banana-reactor"){{
+			requirements(Category.power, with());
+			size = 7;
+			health = 1300;
+			powerProduction = 60;
+			itemDuration = 60f;
+			
+            consumes.power(25f);
+            consumes.item(Items.phaseFabric);
             consumes.liquid(Liquids.water, 0.1f);
 		}};
 		//region end
