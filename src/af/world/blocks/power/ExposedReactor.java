@@ -24,6 +24,7 @@ import static mindustry.Vars.*;
 
 public class ExposedReactor extends ImpactReactor{
 	public TextureRegion bottomRegion, slider1, slider2, heat, orb;
+	public Color heatColor = Pal.turretHeat;
 	
 	public float minOrb = 2;
 	public float scaleOrb = 4;
@@ -62,7 +63,7 @@ public class ExposedReactor extends ImpactReactor{
 			
 			Draw.alpha(warmup);
 			Draw.rect(orb, x, y, Time.time * warmup);
-			Draw.alpha();
+			Draw.reset();
 		}
 		
 		public void drawSliders(){
