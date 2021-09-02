@@ -56,7 +56,7 @@ public class ExposedReactor extends ImpactReactor{
 		@Override
 		public void draw(){
 			Draw.rect(bottomRegion, x, y);
-			drawSliders();`
+			drawSliders();
 			Draw.rect(region, x, y);
 			
 			Draw.alpha(warmup);
