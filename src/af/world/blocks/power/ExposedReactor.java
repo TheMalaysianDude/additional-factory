@@ -55,8 +55,8 @@ public class ExposedReactor extends ImpactReactor{
 			Draw.alpha(warmup);
 			Draw.rect(orb, x, y,
 				(orb.height / 4) * warmup,
-				Mathf.sin(Time.time * timescale * warmup, orbScale * Mathf.pi, (orb.height / 4),
-				Time.time * orbSpeed * timescale * warmup
+				Mathf.sin(Time.time * timescale * warmup, orbScale * Mathf.pi, (orb.height / 4)),
+				(Time.time / 60) * orbSpeed * timescale * warmup
 			);
 			Draw.reset();
 		}
