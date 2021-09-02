@@ -23,11 +23,12 @@ import af.content.*;
 import static mindustry.Vars.*;
 
 public class ExposedReactor extends ImpactReactor{
-	public TextureRegion bottomRegion;
-	public TextureRegion slider1; 
-	public TextureRegion slider2; 
+	public TextureRegion bottomRegion, slider1, slider2, heat, orb;
 	
-	public float sliderLength = 10;
+	public float minOrb = 2;
+	public float scaleOrb = 4;
+	public float magnitudeOrb = 4;
+	public float sliderLength = 4;
 	
 	public ExposedReactor(String name){
 		super(name);
@@ -39,6 +40,8 @@ public class ExposedReactor extends ImpactReactor{
 		bottomRegion = Core.atlas.find(name + "-bottom");
 		slider1 = Core.atlas.find(name + "-slider1");
 		slider2 = Core.atlas.find(name + "-slider2");
+		heat = Core.atlas.find(name + "-heat");
+		orb = Core.atlas.find(name + "-orb");
 	}
 	
 	public class ExposedReactorBuild extends ImpactReactorBuild{
@@ -48,6 +51,18 @@ public class ExposedReactor extends ImpactReactor{
 			Draw.rect(bottomRegion, x, y);
 			drawSliders();
 			Draw.rect(region, x, y);
+			
+			if(heat.found()){
+				Draw.color(heatColor, warmup);
+				Draw.blend(Blending.additive);
+				Draw.rect(heat, x, y);
+				Draw.blend();
+				Draw.color();
+			}
+			
+			Draw.alpha(warmup);
+			Draw.rect(orb, x, y, Time.time * warmup);
+			Draw.alpha();
 		}
 		
 		public void drawSliders(){
