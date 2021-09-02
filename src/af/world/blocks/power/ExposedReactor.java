@@ -45,7 +45,7 @@ public class ExposedReactor extends ImpactReactor{
 	}
 	
 	public class ExposedReactorBuild extends ImpactReactorBuild{
-		float totalProgress;
+		public float totalProgress;
 		
 		@Override
 		public void updateTile(){
