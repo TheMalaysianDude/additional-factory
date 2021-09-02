@@ -50,13 +50,13 @@ public class ExposedReactor extends ImpactReactor{
 		@Override
 		public void updateTile(){
 			super.updateTile();
-			totalProgress += warmup * delta()
+			totalProgress += warmup * delta();
 		}
 		
 		@Override
 		public void draw(){
 			Draw.rect(bottomRegion, x, y);
-			drawSliders();
+			drawSliders();`
 			Draw.rect(region, x, y);
 			
 			Draw.alpha(warmup);
