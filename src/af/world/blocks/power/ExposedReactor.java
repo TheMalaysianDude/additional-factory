@@ -45,7 +45,14 @@ public class ExposedReactor extends ImpactReactor{
 	}
 	
 	public class ExposedReactorBuild extends ImpactReactorBuild{
-		//float size = Math.max(Math.abs(Mathf.sin(build.totalProgress + (count * spacing), scale * Mathf.pi, (piston.width/4))), min);
+		float totalProgress;
+		
+		@Override
+		public void updateTile(){
+			super.updateTile();
+			totalProgress += warmup * delta()
+		}
+		
 		@Override
 		public void draw(){
 			Draw.rect(bottomRegion, x, y);
@@ -55,8 +62,8 @@ public class ExposedReactor extends ImpactReactor{
 			Draw.alpha(warmup);
 			Draw.rect(orb, x, y,
 				(orb.height / 4) * warmup,
-				Mathf.sin(Time.time * timeScale * warmup, orbScale * Mathf.pi, (orb.height / 4)),
-				(Time.time / 60) * orbSpeed * timeScale * warmup
+				Mathf.sin(totalProgress * orbSpeed * warmup, orbScale * Mathf.pi, (orb.height / 4) * warmup),
+				totalProgress * orbSpeed * warmup
 			);
 			Draw.reset();
 		}
