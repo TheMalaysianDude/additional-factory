@@ -47,17 +47,15 @@ public class ExposedReactor extends ImpactReactor{
 		public void draw(){
 			Draw.rect(bottomRegion, x, y);
 			drawSliders();
-			//Draw.rect(region, x, y);
+			Draw.rect(region, x, y);
 		}
 		
 		public void drawSliders(){
-			float length = warmup;
+			float length = sliderLength * warmup;
             for(int i = 0; i < 4; i++){
                 var reg = i >= 2 ? slider2 : slider1;
-                float dx = Geometry.d4x[i] * length;
-				float dy = Geometry.d4y[i] * length;
-				//debug
-				Log.info(dx + ", " + dy);
+                float dx = Geometry.d4x[i] * -length;
+				float dy = Geometry.d4y[i] * -length;
 				
                 Draw.rect(reg, x + dx, y + dy, i * 90);
             }
