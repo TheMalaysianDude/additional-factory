@@ -1,17 +1,17 @@
 # Additional Factory
 A GENERIC Java Mod that adds additional factory based on their predeccesor.
 
-`currently have 4 factories`
+`currently have 5 factories`
 
 # Recent Updates
-Coal Centripetal
+Plastanium Constrict
 
-A larger variant based on Coal Centrifuge
+A larger variant based on Plastanium Compressor
 
 -Power Use: `84 power units/second`
  
--Input: `9.59/sec Oil`
+-Input: `24/sec Oil`
  
--Output: `6.66/sec Coal`
+-Output: `2.66/sec Plastanium`
  
--Production `Time: 0.75`
+-Production Time: `0.45`
