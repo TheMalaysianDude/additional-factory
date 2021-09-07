@@ -134,7 +134,7 @@ public class AFBlocks implements ContentList{
 		
 		//region experimental
 		neutroniumReactor = new ExposedReactor("neutronium-reactor"){{
-			requirements(Category.power, with());
+			requirements(Category.power, BuildVisibility.sandboxOnly, with());
 			size = 7;
 			health = 1300;
 			powerProduction = 240f;
@@ -146,7 +146,7 @@ public class AFBlocks implements ContentList{
 		}};
 		
 		bananaReactor = new ExposedReactor("banana-reactor"){{
-			requirements(Category.power, with());
+			requirements(Category.power, BuildVisibility.sandboxOnly, with());
 			size = 7;
 			health = 1300;
 			powerProduction = 60;
