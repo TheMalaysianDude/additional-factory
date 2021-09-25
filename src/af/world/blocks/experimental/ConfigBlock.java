@@ -18,7 +18,7 @@ import static mindustry.Vars.*;
 public class ConfigBlock extends Block{
 	
 	public ConfigBlock(String name){
-		super(name)
+		super(name);
         configurable = true;
         solid = true;
         destructible = true;
