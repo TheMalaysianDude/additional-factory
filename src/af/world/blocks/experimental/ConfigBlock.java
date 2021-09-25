@@ -25,8 +25,7 @@ public class ConfigBlock extends Block{
         group = BlockGroup.logic;
         drawDisabled = false;
 		
-		config(Boolean.class,
-		(ConfigBlockBuild entity, Boolean b) -> 
+		config(Boolean.class, (ConfigBlockBuild entity, Boolean b) -> 
 			entity.enabled = b;
 		);
 	}
