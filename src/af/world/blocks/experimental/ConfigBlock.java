@@ -33,7 +33,7 @@ public class ConfigBlock extends Block{
 	
 	public class ConfigBlockBuild extends Block{
 		@Override
-		public draw(){
+		public void draw(){
 			super.draw();
 			
 			if(enabled){
