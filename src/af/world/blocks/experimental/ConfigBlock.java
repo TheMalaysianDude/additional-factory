@@ -2,7 +2,6 @@ package af.world.blocks.experimental;
 
 import arc.graphics.g2d.*;
 import arc.util.io.*;
-import mindustry.annotations.Annotations.*;
 import mindustry.gen.*;
 import mindustry.world.*;
 import mindustry.world.meta.*;
@@ -10,6 +9,7 @@ import mindustry.world.meta.*;
 import static mindustry.Vars.*;
 
 public class ConfigBlock extends Block{
+	public TextureRegion onRegion;
 	
 	public ConfigBlock(String name){
 		super(name);
@@ -20,6 +20,12 @@ public class ConfigBlock extends Block{
         drawDisabled = false;
 		
 		config(Boolean.class, (ConfigBlockBuild entity, Boolean b) -> entity.enabled = b);
+	}
+	
+	@Override
+	public void load(){
+		super.load();
+		onRegion = Core.atlas.find(name + "-on");
 	}
 	
 	public class ConfigBlockBuild extends Block{
